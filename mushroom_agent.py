@@ -72,6 +72,9 @@ import streamlit as st
 
 st.title("Mushroom Foraging Assistant")
 
+# Check if the OPENAI_API_KEY environment variable is set
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 user_input = st.text_input("Ask a question about mushrooms or foraging:")
 
 if st.button('Submit'):
